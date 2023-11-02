@@ -21,7 +21,7 @@ import Help from './Pages/Help'
 import HelpDispute from './Pages/HelpDispute'
 import Faq from './Pages/Faq'
 import Jobs from './Pages/Jobs'
-import WorkingOnIt from './Pages/WorkingOnIt'
+import Blog from './Pages/Blog'
 import Client from './Pages/Client'
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
     <Router>
       <Routes>
       <Route path='/' element={<Landing/>}/>
-      <Route path="/blog" element={<WorkingOnIt />} />
+      <Route path="/blog" element={<Blog />} />
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
         <Route path="/freelancersignup" element={<FreelancerSignup />} />
