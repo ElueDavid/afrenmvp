@@ -7,7 +7,9 @@ import "../Styles/helpDispute.css"
 export default function HelpDispute() {
   return (
     <>
-        <div id="main2">
+        <div id="main"
+            style={{height : "fit-content"}}
+        >
             <p id="back-link"><a href="javascript:void(0)">&lt;</a> Back</p>
             <div id="main-top">
                 <div id="top-head">

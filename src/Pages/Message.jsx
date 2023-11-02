@@ -24,7 +24,7 @@ import sendPlane from  "../assets/afren-images2/send-plane.png"
 export default function Message() {
   return (
     <>
-         <div className="chat-space">
+            <div className="chat-space">
             <p className="chat-space-description">
                 Messages
             </p>
@@ -161,8 +161,8 @@ export default function Message() {
                     </div>
                 </div>
             </section>
-        </div>
-        <div className="message-space">
+            </div>
+            <div className="message-space">
             <div className="message-nav">
                 <div className="profile-description">
                     <img src={greaterThan} alt="" id="back-btn" />
@@ -293,7 +293,7 @@ export default function Message() {
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
     </>
   )
 }

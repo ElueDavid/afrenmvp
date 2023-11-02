@@ -246,7 +246,7 @@
 #main-pay{
     position: relative;
     width: calc(100% - 260px);
-    /* left: 260px; */
+    left: 260px;
     padding: 40px;
     font-family: quicksand;
 }
@@ -578,7 +578,7 @@ tbody tr:hover {
     }
     #main-pay{
         width: calc(100% - 190px);
-        /* left: 190px; */
+        left: 190px;
     }
 }
 @media (max-width: 1007px){
@@ -653,7 +653,7 @@ tbody tr:hover {
     }
     #main-pay{
         width: calc(100% - 180px);
-        /* left: 180px; */
+        left: 180px;
     }
     .nav-links{
         font-size: 12px;
@@ -740,7 +740,7 @@ tbody tr:hover {
     }
     #main-pay{
         width: calc(100% - 60px);
-        /* left: 60px; */
+        left: 60px;
     }
     .side-menu a{
         width: auto;
@@ -926,7 +926,7 @@ tbody tr:hover {
     }
     #main-pay{
         width: calc(100% - 50px);
-        /* left: 50px; */
+        left: 50px;
     }
 }
 @media (max-width: 444px){

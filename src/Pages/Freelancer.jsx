@@ -8,9 +8,11 @@ import HelpDispute from './HelpDispute'
 import { useState } from "react"
 import Message from './Message'
 import Billings from './Billings'
+import Feedback from './Feedback'
 
 export default function Freelancer() {
     const [isVisibleSection, setVisibleSection] = useState("dashboard")
+    const [defaultSection, setDefaultSection] = useState("dashboard")
   return (
     <>
         <Navbar2 />
@@ -70,8 +72,9 @@ export default function Freelancer() {
             </form>
             </div>
         </div>}
-        <div className='menu-cover'>
-            <Sidebar setVisibleSection={setVisibleSection} isVisibleSection={isVisibleSection} />
+        <div className='menu-cover2'>
+            <Sidebar section={defaultSection} setVisibleSection={setVisibleSection} isVisibleSection={isVisibleSection} />
+        
         { isVisibleSection === "dashboard"
         ?
         <div id="freeelancer-main">
@@ -382,7 +385,9 @@ export default function Freelancer() {
         ?<HelpDispute />
         : isVisibleSection === "message"
         ? <Message />
-        : <Billings />
+        : isVisibleSection === "billings" 
+        ? <Billings />
+        : <Feedback /> 
         }
         </div>
     </>

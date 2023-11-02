@@ -32,6 +32,22 @@ export default function Payment() {
           },
         ]
     });
+    const [paymentObj, setPaymentObj] = useState({
+        payment1 : false,
+        payment2 : false,
+        payment3 : false,
+        payment4 : false,
+        payment5 : false
+    })
+
+    const {payment1, payment2, payment3, payment4, payment5} = paymentObj
+
+    function handleClick(options){
+        setPaymentObj({
+            ...paymentObj,
+            [options] : !paymentObj[options]
+        })
+    }
 
   return (
     <div id="body-div">
@@ -43,9 +59,15 @@ export default function Payment() {
                             <div className="pymnt-type-card">
                                 <input type="radio" name="radio-drp" id="" />
                                 <label for="">Direct Bank Transfer</label>
-                                {/* <i className="fas fa-chevron-down pymnt-drp-icon"></i> */}
+                                <i 
+                                    onClick={()=>{handleClick("payment1")}}  
+                                    className="fas fa-chevron-down pymnt-drp-icon"
+                                    style={{transform: payment1 ? "rotate(180deg)" : "rotate(0deg)" }}
+                                ></i>
                             </div>
-                            <div className="card-info-whole">
+                            { 
+                            payment1
+                            && <div className="card-info-whole">
                                 <p>Credit or Debit</p>
                                 <input type="text" name="" className="card-inp" id="" placeholder="Card Name" />
                                 <div className="date-cvc">                                  
@@ -57,16 +79,23 @@ export default function Payment() {
                                     </div>
                                 </div>
                                 <input type="text" name="" className="card-inp card-num" id="" placeholder="Card Number" />
-                            </div>
+                                </div>
+                            }
                         </div>
                         <div className="pymnt-type-whole">
                             <div className="pymnt-type-card">
                                 <input type="radio" name="radio-drp" id="" />
                                 <label for="">Automatic Bank Transfer</label>
                                 <img src={image182} className="bank-trasf card-images" alt="" />
-                                <i className="fas fa-chevron-down pymnt-drp-icon"></i>
+                                <i 
+                                    onClick={()=>{handleClick("payment2")}} 
+                                    className="fas fa-chevron-down pymnt-drp-icon"
+                                    style={{transform: payment2 ? "rotate(180deg)" : "rotate(0deg)" }}    
+                                ></i>
                             </div>
-                            <div className="card-info-whole">
+                            {   payment2
+                              &&  
+                                <div className="card-info-whole">
                                 <p>Credit or Debit</p>
                                 <input type="text" name="" className="card-inp" id="" placeholder="Card Name" />
                                 <div className="date-cvc">                                  
@@ -77,7 +106,8 @@ export default function Payment() {
                                     </div>
                                 </div>
                                 <input type="text" name="" className="card-inp card-num" id="" placeholder="Card Number" />
-                            </div>
+                                </div>
+                            }
                         </div>
                         <div className="pymnt-type-whole">
                             <div className="pymnt-type-card">
@@ -88,9 +118,15 @@ export default function Payment() {
                                     <img src={visa} alt="" />
                                     <img src={rectangle338} alt="" />
                                 </div>
-                                <i className="fas fa-chevron-up pymnt-drp-icon"></i>
+                                <i 
+                                    onClick={()=>{handleClick("payment3")}} 
+                                    className="fas fa-chevron-down pymnt-drp-icon"
+                                    style={{transform: payment3 ? "rotate(180deg)" : "rotate(0deg)" }}    
+                                ></i>
                             </div>
-                            <div className="card-info-whole">
+                            {   payment3
+                                &&
+                                <div className="card-info-whole">
                                 <p>Credit or Debit</p>
                                 <input type="text" name="" className="card-inp" id="" placeholder="Card Name" />
                                 <div className="date-cvc">                                  
@@ -101,7 +137,8 @@ export default function Payment() {
                                     </div>
                                 </div>
                                 <input type="text" name="" className="card-inp card-num" id="" placeholder="Card Number" />
-                            </div>
+                                </div>
+                            }
                         </div>
                         <div className="pymnt-type-whole">
                             <div className="pymnt-type-card">
@@ -111,9 +148,15 @@ export default function Payment() {
                                     <img src={image183} alt="" />
                                     <img src={image184} alt="" />
                                 </div>
-                                <i className="fas fa-chevron-down pymnt-drp-icon"></i>
+                                <i 
+                                    onClick={()=>{handleClick("payment4")}} 
+                                    className="fas fa-chevron-down pymnt-drp-icon"
+                                    style={{transform: payment4 ? "rotate(180deg)" : "rotate(0deg)" }}    
+                                ></i>
                             </div>
-                            <div className="card-info-whole">
+                            {   payment4
+                                &&
+                                <div className="card-info-whole">
                                 <p>Credit or Debit</p>
                                 <input type="text" name="" className="card-inp" id="" placeholder="Card Name" />
                                 <div className="date-cvc">                                  
@@ -125,7 +168,8 @@ export default function Payment() {
                                     </div>
                                 </div>
                                 <input type="text" name="" className="card-inp card-num" id="" placeholder="Card Number" />
-                            </div>
+                                </div>
+                            }
                         </div>
                         <div className="pymnt-type-whole">
                             <div className="pymnt-type-card">
@@ -135,9 +179,15 @@ export default function Payment() {
                                     <img src={image185} alt=""/>
                                     <img src={image3} alt="" />
                                 </div>
-                                <i className="fas fa-chevron-down pymnt-drp-icon"></i>
+                                <i 
+                                    onClick={()=>{handleClick("payment5")}} 
+                                    className="fas fa-chevron-down pymnt-drp-icon"
+                                    style={{transform: payment5 ? "rotate(180deg)" : "rotate(0deg)" }}    
+                                ></i>
                             </div>
-                            <div className="card-info-whole">
+                            {   payment5
+                                &&
+                                <div className="card-info-whole">
                                 <p>Credit or Debit</p>
                                 <input type="text" name="" className="card-inp" id="" placeholder="Card Name" />
                                 <div className="date-cvc">                                  
@@ -149,7 +199,8 @@ export default function Payment() {
                                     </div>
                                 </div>
                                 <input type="text" name="" className="card-inp card-num" id="" placeholder="Card Number" />
-                            </div>
+                                </div>
+                            }
                         </div>
                         <input type="submit" className="pay-butt" name="" id="" value="Withdraw" />
                     </form>

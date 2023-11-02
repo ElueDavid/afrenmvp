@@ -22,6 +22,7 @@ import HelpDispute from './Pages/HelpDispute'
 import Faq from './Pages/Faq'
 import Jobs from './Pages/Jobs'
 import WorkingOnIt from './Pages/WorkingOnIt'
+import Client from './Pages/Client'
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
         <Route path="/buyerreg" element={<BuyerReg />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/freelancerdash" element={<Freelancer />} />
+        <Route path="/clientdash" element={<Client />} />
         <Route path="/testimonails" element={<Testimonails />} />
         {/* <Route path='/leaderboard' element={<Leaderboard />} /> */}
         <Route path='/help' element={<Help />} />
