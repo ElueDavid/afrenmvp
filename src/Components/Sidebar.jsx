@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 
-export default function Sidebar({section,setVisibleSection,isVisibleSection}) {
+export default function Sidebar({profile,section,setVisibleSection,isVisibleSection}) {
   const [isActive, setisActive] = useState("")
   const [isSubMenuOpen, setSubMenuOpen] = useState(false)
   const navigate = useNavigate()
@@ -43,10 +43,18 @@ export default function Sidebar({section,setVisibleSection,isVisibleSection}) {
             <div id="sett-drop">
               <div id="settdrop-line"></div>
               <ul id="sett-dropcontent">
-                <li><a href="">Profile</a></li>
-                <li><a href="">Account</a></li>
-                <li><a href="">Security</a></li>
-                <li><a href="">Bids</a></li>
+                <li onClick={()=>setVisibleSection("prof")}>
+                  <a href="javascript:viod(0)">
+                    Profile
+                  </a>
+                </li>
+                <li onClick={()=>setVisibleSection("account")}>
+                  <a href="javascript:void(0)">Account</a></li>
+                <li onClick={()=>setVisibleSection("security")} >
+                  <a href="javvascript:void(0)">Security</a>
+                </li>
+                <li onClick={()=>setVisibleSection("bids")}>
+                  <a href="javascript:void(0)">Bids</a></li>
                 <li onClick={()=> setVisibleSection("feedback")}>
                   <a href="javascript:void(0)">Feedback</a>
                 </li>

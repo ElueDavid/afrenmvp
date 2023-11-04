@@ -9,13 +9,24 @@ import { useState } from "react"
 import Message from './Message'
 import Billings from './Billings'
 import Feedback from './Feedback'
+import SettingsAcc from './SettingsAcc'
+import SettingsBids from './SettingsBids'
+import SettingProfile from './SettingProfile'
+import SettingSecurity from './SettingSecurity'
+import InCallSystem from './InCallSystem'
 
 export default function Freelancer() {
     const [isVisibleSection, setVisibleSection] = useState("dashboard")
     const [defaultSection, setDefaultSection] = useState("dashboard")
+    const [profileView, setProfileView] = useState("profile")
+    const [inCallSystem,setInCallSystem] = useState(false)
   return (
     <>
-        <Navbar2 />
+        {
+        !inCallSystem
+        &&
+        <>
+        <Navbar2 profile={profileView} setVisibleSection={setVisibleSection} />
         {isVisibleSection === "helpdispute" &&  <div id="popup-back">
             <div id="disp-form">
             <div id="disp-ttle">
@@ -71,9 +82,14 @@ export default function Freelancer() {
                 <input type="submit" name="" id="form-create" value="Create dispute" />
             </form>
             </div>
-        </div>}
+        </div>} 
+        </>
+        }
+        {
+        !inCallSystem
+        &&
         <div className='menu-cover2'>
-            <Sidebar section={defaultSection} setVisibleSection={setVisibleSection} isVisibleSection={isVisibleSection} />
+            <Sidebar profile={profileView} section={defaultSection} setVisibleSection={setVisibleSection} isVisibleSection={isVisibleSection} />
         
         { isVisibleSection === "dashboard"
         ?
@@ -384,12 +400,28 @@ export default function Freelancer() {
         : isVisibleSection === "helpdispute"
         ?<HelpDispute />
         : isVisibleSection === "message"
-        ? <Message />
+        ? <Message setInCallSystem={setInCallSystem} />
         : isVisibleSection === "billings" 
         ? <Billings />
-        : <Feedback /> 
-        }
+        : isVisibleSection === "feedback"
+        ?<Feedback /> 
+        : isVisibleSection === "account"
+        ? <SettingsAcc />
+        : isVisibleSection === "bids"
+        ? <SettingsBids />
+        : isVisibleSection === "prof"
+        ? <SettingProfile />
+        : isVisibleSection === "security"
+        ? <SettingSecurity />
+        : null
+    }
         </div>
+        }
+        {
+            inCallSystem
+            &&
+            <InCallSystem />
+        }
     </>
   )
 }

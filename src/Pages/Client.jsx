@@ -19,6 +19,11 @@ import rect from "../assets/afren-images2/Rectangle 34624273.png"
 import rect1 from "../assets/afren-images2/Rectangle 34624273-1.png"
 import rect2 from "../assets/afren-images2/Rectangle 34624273-2.png"
 import ellipse32 from "../assets/afren-images2/Ellipse 32.png"
+import ClientProfileView from './ClientProfileView';
+import SettingsAcc from './SettingsAcc';
+import SettingsBids from './SettingsBids';
+import SettingProfile from './SettingProfile';
+import SettingSecurity from './SettingSecurity';
 
 
 
@@ -28,6 +33,7 @@ Chart.register(CategoryScale);
 export default function Client() {
     const [isVisibleSection, setVisibleSection] = useState("dashboard2")
     const [defaultSection, setDefaultSection] = useState("dashboard2")
+    const [profileView,setPorfileView] = useState("profile2")
     const [chartData, setChartData] = useState({
         labels: Data.map((data) => data.week), 
         datasets: [
@@ -60,7 +66,7 @@ export default function Client() {
 
   return (
     <>
-        <Navbar2 />
+        <Navbar2 profile={profileView} setVisibleSection={setVisibleSection} />
         {isVisibleSection === "helpdispute" &&  
         <div id="popup-back">
             <div id="disp-form">
@@ -119,7 +125,7 @@ export default function Client() {
             </div>
         </div>}
         <div className='menu-cover2'>
-            <Sidebar section={defaultSection} setVisibleSection={setVisibleSection} isVisibleSection={isVisibleSection} />
+            <Sidebar profile={profileView} section={defaultSection} setVisibleSection={setVisibleSection} isVisibleSection={isVisibleSection} />
             { isVisibleSection === "dashboard2"
             ?
                 <div id="main">
@@ -367,8 +373,20 @@ export default function Client() {
             ? <Message />
             : isVisibleSection === "billings" 
             ? <Billings />
-            : <Feedback /> 
-            }
+            : isVisibleSection === "feedback"
+            ?<Feedback />
+            : isVisibleSection === "profile2" 
+            ?<ClientProfileView />
+            : isVisibleSection === "account"
+            ? <SettingsAcc />
+            : isVisibleSection === "bids"
+            ? <SettingsBids />
+            : isVisibleSection === "prof"
+            ? <SettingProfile />
+            : isVisibleSection === "security"
+            ? <SettingSecurity />
+            :null 
+        }
         </div>
     </>
   )

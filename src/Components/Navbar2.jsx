@@ -2,7 +2,7 @@ import React from 'react'
 import Ellipse31 from "../assets/afren-images/Ellipse31.png"
 import "../Styles/navbar2.css"
 
-export default function Navbar2() {
+export default function Navbar2({profile,setVisibleSection}) {
   return (
     <nav class="nav2">
         <i class="fa fa-qrcode" id="menu-icon" aria-hidden="true"></i>
@@ -12,7 +12,7 @@ export default function Navbar2() {
                 <ul class="nav-links">
                     <i class="fa fa-times navCloseBtn"></i>
                     <div id="prof-cover">
-                        <div id="profile">
+                        <div id="profile" onClick={()=>{setVisibleSection(profile)}}>
                             <img src={Ellipse31} alt="" />
                             <div class="online-tag"></div>
                         </div>
