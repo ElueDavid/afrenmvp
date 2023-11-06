@@ -24,6 +24,8 @@ import SettingsAcc from './SettingsAcc';
 import SettingsBids from './SettingsBids';
 import SettingProfile from './SettingProfile';
 import SettingSecurity from './SettingSecurity';
+import InCallSystem from './InCallSystem';
+import Myjobs from './Myjobs';
 
 
 
@@ -32,6 +34,8 @@ Chart.register(CategoryScale);
 
 export default function Client() {
     const [isVisibleSection, setVisibleSection] = useState("dashboard2")
+    const [inCallSystem,setInCallSystem] = useState(false)
+    const [myJobs, setMyjobs] = useState(false)
     const [defaultSection, setDefaultSection] = useState("dashboard2")
     const [profileView,setPorfileView] = useState("profile2")
     const [chartData, setChartData] = useState({
@@ -66,6 +70,13 @@ export default function Client() {
 
   return (
     <>
+        {   !myJobs
+        &&
+        <>
+        { 
+        !inCallSystem 
+            &&
+        <>
         <Navbar2 profile={profileView} setVisibleSection={setVisibleSection} />
         {isVisibleSection === "helpdispute" &&  
         <div id="popup-back">
@@ -124,8 +135,18 @@ export default function Client() {
             </form>
             </div>
         </div>}
+        </>
+        }
+        </>
+    }
+        { !myJobs
+            &&
+        <>
+        {
+        !inCallSystem
+        &&
         <div className='menu-cover2'>
-            <Sidebar profile={profileView} section={defaultSection} setVisibleSection={setVisibleSection} isVisibleSection={isVisibleSection} />
+            <Sidebar setMyjobs={setMyjobs} profile={profileView} section={defaultSection} setVisibleSection={setVisibleSection} isVisibleSection={isVisibleSection} />
             { isVisibleSection === "dashboard2"
             ?
                 <div id="main">
@@ -370,7 +391,7 @@ export default function Client() {
             : isVisibleSection === "helpdispute"
             ? <HelpDispute />
             : isVisibleSection === "message"
-            ? <Message />
+            ? <Message setInCallSystem={setInCallSystem} />
             : isVisibleSection === "billings" 
             ? <Billings />
             : isVisibleSection === "feedback"
@@ -388,6 +409,19 @@ export default function Client() {
             :null 
         }
         </div>
+        }
+        </>
+        }
+        {
+            inCallSystem
+            &&
+            <InCallSystem  setInCallSystem={setInCallSystem} />
+        }
+        {
+            myJobs
+            &&
+            <Myjobs  setMyjobs={setMyjobs} isVisibleSection={isVisibleSection} setVisibleSection={setVisibleSection} />
+        }
     </>
   )
 }

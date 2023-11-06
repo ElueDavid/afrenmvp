@@ -23,6 +23,7 @@ import Faq from './Pages/Faq'
 import Jobs from './Pages/Jobs'
 import Blog from './Pages/Blog'
 import Client from './Pages/Client'
+import Myjobs from './Pages/Myjobs'
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
         {/* <Route path='/helpdispute' element={<HelpDispute />} /> */}
         <Route path='/faq' element={<Faq />} />
         <Route path='/jobs' element={<Jobs />} />
+        {/* <Route path='/myjobs' element={<Myjobs />} /> */}
       </Routes>
     </Router>
   )

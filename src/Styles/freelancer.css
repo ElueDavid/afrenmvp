@@ -331,7 +331,7 @@
 #inv-cds-cover{
     margin-top: 30px;
 }
-.inv-card{
+.inv-card2{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -364,11 +364,11 @@
     justify-content: space-between;
     align-items: center;
 }
-.inv-card .type{
+.inv-card2 .type{
     color: grey;
     font-size: 14px;
 }
-.inv-card .progress{
+.inv-card2 .progress{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -380,15 +380,15 @@
     border-radius: 10px;
     font-weight: bold;
 }
-.inv-card .pending{
+.inv-card2 .pending{
     background-color: #F6C7AC;
     color: #D76C2F;
 }
-.inv-card .paid{
+.inv-card2 .paid{
     background-color: #BAF5CA;
     color: #34A853;
 }
-.inv-card .amount{
+.inv-card2 .amount2{
     color: #015b7e;
     font-weight: bold;
     font-size: 17px;
@@ -598,7 +598,7 @@
 #recommend-prj h3{
     color: #015b7e;
 }
-.prj-div{
+.prj-div2{
     box-shadow: 4px 4px 16px rgba(0,0,0,0.05);
     padding: 20px;
     border-radius: 15px;
@@ -757,7 +757,7 @@
     #invoice-cover{
         width: 100%;
     }
-    .inv-card{
+    .inv-card2{
         padding: 10px;
     }
     #fifth{
@@ -904,14 +904,14 @@
     .inv-name small{
         font-size: 11px;
     }
-    .inv-card .type{
+    .inv-card2 .type{
         font-size: 13px;
     }
-    .inv-card .progress{
+    .inv-card2 .progress{
         font-size: 11px;
         width: 80px;
     }
-    .inv-card .amount{
+    .inv-card2 .amount2{
         font-size: 16px;
     }
     .inv-profile .image{

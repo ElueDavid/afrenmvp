@@ -14,16 +14,21 @@ import SettingsBids from './SettingsBids'
 import SettingProfile from './SettingProfile'
 import SettingSecurity from './SettingSecurity'
 import InCallSystem from './InCallSystem'
+import Myjobs from './Myjobs'
 
 export default function Freelancer() {
     const [isVisibleSection, setVisibleSection] = useState("dashboard")
     const [defaultSection, setDefaultSection] = useState("dashboard")
     const [profileView, setProfileView] = useState("profile")
     const [inCallSystem,setInCallSystem] = useState(false)
+    const [myJobs, setMyjobs] = useState(false)
   return (
     <>
+        { !myJobs
+        &&
+        <>
         {
-        !inCallSystem
+        !inCallSystem 
         &&
         <>
         <Navbar2 profile={profileView} setVisibleSection={setVisibleSection} />
@@ -85,11 +90,17 @@ export default function Freelancer() {
         </div>} 
         </>
         }
+        </>
+        }
+        {
+            !myJobs
+        &&
+        <>
         {
         !inCallSystem
         &&
         <div className='menu-cover2'>
-            <Sidebar profile={profileView} section={defaultSection} setVisibleSection={setVisibleSection} isVisibleSection={isVisibleSection} />
+            <Sidebar  setMyjobs={setMyjobs}  profile={profileView} section={defaultSection} setVisibleSection={setVisibleSection} isVisibleSection={isVisibleSection} />
         
         { isVisibleSection === "dashboard"
         ?
@@ -154,7 +165,7 @@ export default function Freelancer() {
             <div id="invoice-cover">
                 <h3>Quotes & Invoices</h3>
                 <div id="inv-cds-cover">
-                    <div class="inv-card">
+                    <div class="inv-card2">
                         <div class="inv-profile">
                             <div class="image">
                                 <img src="src/assets/afren-images/Rectangle 34624273.png" alt=""/>
@@ -168,9 +179,9 @@ export default function Freelancer() {
                             <span class="type">Quote</span>
                             <div class="progress">In Revision</div>
                         </div>
-                        <span class="amount">$1,222</span>
+                        <span class="amount2">$1,222</span>
                     </div>
-                    <div class="inv-card">
+                    <div class="inv-card2">
                         <div class="inv-profile">
                             <div class="image">
                                 <img src="src/assets/afren-images/Rectangle 34624273-1.png" alt=""/>
@@ -184,9 +195,9 @@ export default function Freelancer() {
                             <span class="type">Invoice</span>
                             <div class="progress pending">Pending</div>
                         </div>
-                        <span class="amount">$1,222</span>
+                        <span class="amount2">$1,222</span>
                     </div>
-                    <div class="inv-card">
+                    <div class="inv-card2">
                         <div class="inv-profile">
                             <div class="image">
                                 
@@ -200,7 +211,7 @@ export default function Freelancer() {
                             <span class="type">Invoice</span>
                             <div class="progress paid">Paid</div>
                         </div>
-                        <span class="amount">$1,222</span>
+                        <span class="amount2">$1,222</span>
                     </div>
                 </div>
             </div>
@@ -372,7 +383,7 @@ export default function Freelancer() {
             </div>
             <div id="recommend-prj">
                 <h3>Recommend Project</h3>
-                <div class="prj-div">
+                <div class="prj-div2">
                     <div class="prj-client-info">
                         <div class="prj-client-prf">
                             <div class="prj-client-pic">
@@ -417,10 +428,17 @@ export default function Freelancer() {
     }
         </div>
         }
+        </>
+        }
         {
             inCallSystem
             &&
-            <InCallSystem />
+            <InCallSystem  setInCallSystem={setInCallSystem}/>
+        }
+        {
+            myJobs
+            &&
+            <Myjobs setMyjobs={setMyjobs} isVisibleSection={isVisibleSection} setVisibleSection={setVisibleSection} />
         }
     </>
   )

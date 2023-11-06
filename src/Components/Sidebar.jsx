@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 
-export default function Sidebar({profile,section,setVisibleSection,isVisibleSection}) {
+export default function Sidebar({setMyjobs,profile,section,setVisibleSection,isVisibleSection}) {
   const [isActive, setisActive] = useState("")
   const [isSubMenuOpen, setSubMenuOpen] = useState(false)
   const navigate = useNavigate()
@@ -26,7 +26,7 @@ export default function Sidebar({profile,section,setVisibleSection,isVisibleSect
             <i class="fa fa-comment-o icon" aria-hidden="true"></i>Messages
           </a>
         </li>
-        <li class="menu-opt2" onClick={()=>{navigate("/jobs")}} >
+        <li class="menu-opt2" onClick={()=>setMyjobs(true)} >
           <a href="javascript:void(0)"><i class="fas fa-suitcase icon"></i>My Jobs</a></li>
         <li class="menu-opt2" onClick={()=>setVisibleSection("leaderboard")} >
           <a class={isVisibleSection == "leaderboard" ? "active" : null}  href="javascript:void(0)"><i class="fas fa-award icon"></i>Leader board</a>

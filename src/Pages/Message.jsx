@@ -21,7 +21,7 @@ import sendPlane from  "../assets/afren-images2/send-plane.png"
 
 
 
-export default function Message() {
+export default function Message({setInCallSystem}) {
   return (
     <>
             <div className="chat-space">
@@ -178,7 +178,7 @@ export default function Message() {
                     <a href="javascript:void(0)" className="nav-btn-link" title="rate">
                         <img src={starIcon} className="icon-1" alt="" />
                     </a>
-                    <a href="javascript:void(0)" className="nav-btn-link" title="video call">
+                    <a onClick={()=>setInCallSystem(true)} href="javascript:void(0)" className="nav-btn-link" title="video call">
                         <img src={videoCamera} className="icon-2" alt="" />
                     </a>
                     <a href="javascript:void(0)" className="nav-btn-link" title="attachment">
