@@ -26,6 +26,7 @@ import SettingProfile from './SettingProfile';
 import SettingSecurity from './SettingSecurity';
 import InCallSystem from './InCallSystem';
 import Myjobs from './Myjobs';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -33,6 +34,7 @@ Chart.register(CategoryScale);
 
 
 export default function Client() {
+    const navigate = useNavigate()
     const [isVisibleSection, setVisibleSection] = useState("dashboard2")
     const [inCallSystem,setInCallSystem] = useState(false)
     const [myJobs, setMyjobs] = useState(false)
@@ -147,7 +149,7 @@ export default function Client() {
         &&
         <div className='menu-cover2'>
             <Sidebar setMyjobs={setMyjobs} profile={profileView} section={defaultSection} setVisibleSection={setVisibleSection} isVisibleSection={isVisibleSection} />
-            { isVisibleSection === "dashboard2"
+            { isVisibleSection === "dashboard2" || "myjobs"
             ?
                 <div id="main">
         <div id="top-div">
@@ -181,8 +183,8 @@ export default function Client() {
                 <p>Total Projects</p>
                 <h2>135k</h2>
             </div>
-            <div className="info-data-card new-gi">
-                <a href="">+</a>
+            <div onClick={()=>navigate("/creategig")} className="info-data-card new-gi">
+                <a href="javascript:void(0)">+</a>
                 <p>Add a new gig</p>
             </div>
         </div>

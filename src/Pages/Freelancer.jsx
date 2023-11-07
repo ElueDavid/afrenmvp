@@ -15,6 +15,8 @@ import SettingProfile from './SettingProfile'
 import SettingSecurity from './SettingSecurity'
 import InCallSystem from './InCallSystem'
 import Myjobs from './Myjobs'
+import ClientProfileView from './ClientProfileView'
+import FreelancerJob from './FreelancerJob'
 
 export default function Freelancer() {
     const [isVisibleSection, setVisibleSection] = useState("dashboard")
@@ -24,9 +26,6 @@ export default function Freelancer() {
     const [myJobs, setMyjobs] = useState(false)
   return (
     <>
-        { !myJobs
-        &&
-        <>
         {
         !inCallSystem 
         &&
@@ -90,12 +89,6 @@ export default function Freelancer() {
         </div>} 
         </>
         }
-        </>
-        }
-        {
-            !myJobs
-        &&
-        <>
         {
         !inCallSystem
         &&
@@ -422,23 +415,18 @@ export default function Freelancer() {
         ? <SettingsBids />
         : isVisibleSection === "prof"
         ? <SettingProfile />
-        : isVisibleSection === "security"
+        : isVisibleSection === "security" 
         ? <SettingSecurity />
-        : null
+        : isVisibleSection === "profile"
+        ? <ClientProfileView />
+        : <FreelancerJob />
     }
         </div>
-        }
-        </>
         }
         {
             inCallSystem
             &&
             <InCallSystem  setInCallSystem={setInCallSystem}/>
-        }
-        {
-            myJobs
-            &&
-            <Myjobs setMyjobs={setMyjobs} isVisibleSection={isVisibleSection} setVisibleSection={setVisibleSection} />
         }
     </>
   )

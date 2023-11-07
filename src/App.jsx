@@ -24,6 +24,7 @@ import Jobs from './Pages/Jobs'
 import Blog from './Pages/Blog'
 import Client from './Pages/Client'
 import Myjobs from './Pages/Myjobs'
+import CreateGig from './Pages/CreateGig'
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
         <Route path='/faq' element={<Faq />} />
         <Route path='/jobs' element={<Jobs />} />
         {/* <Route path='/myjobs' element={<Myjobs />} /> */}
+        <Route path="/createGig" element={<CreateGig />} />
       </Routes>
     </Router>
   )
