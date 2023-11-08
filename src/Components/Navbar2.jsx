@@ -1,6 +1,7 @@
 import React from 'react'
 import Ellipse31 from "../assets/afren-images/Ellipse31.png"
-import "../Styles/navbar2.css"
+// import "../Styles/navbar2.css"
+import "../style.css"
 
 export default function Navbar2({profile,setVisibleSection}) {
   return (
