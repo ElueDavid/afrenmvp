@@ -79,7 +79,7 @@ export default function Myjobs({setMyjobs,isVisibleSection,setVisibleSection}) {
             <div 
                 style={{cursor: "pointer"}}
                 className="myJobs-back-space" 
-                onClick={()=> {setMyjobs(false)}}> 
+                onClick={()=> {setMyjobs(false); setVisibleSection("dashboard2")}}> 
                 <img src={blueArrowLeft} alt=""/>
                 <p>Back</p>
             </div>

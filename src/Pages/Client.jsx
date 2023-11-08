@@ -149,7 +149,7 @@ export default function Client() {
         &&
         <div className='menu-cover2'>
             <Sidebar setMyjobs={setMyjobs} profile={profileView} section={defaultSection} setVisibleSection={setVisibleSection} isVisibleSection={isVisibleSection} />
-            { isVisibleSection === "dashboard2" || "myjobs"
+            { isVisibleSection === "dashboard2"
             ?
                 <div id="main">
         <div id="top-div">
