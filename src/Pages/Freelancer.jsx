@@ -1,5 +1,6 @@
 import React from 'react'
-import "../Styles/freelancer.css"
+// import "../Styles/freelancer.css"
+import "../style.css"
 import Sidebar from '../Components/Sidebar'
 import female_2 from "../assets/afren-images/female-2.png"
 import Navbar2 from '../Components/Navbar2'
