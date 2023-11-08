@@ -16,7 +16,8 @@ import badge_2 from "../assets/afren-images/badge-2.png"
 import badge_3 from "../assets/afren-images/badge-3.png"
 import badge_4 from "../assets/afren-images/badge-4.png"
 import badge_5 from "../assets/afren-images/badge-5.png"
-import "../Styles/leaderboard.css"
+// import "../Styles/leaderboard.css"
+import "../style.css"
 
 
 export default function Leaderboard() {
