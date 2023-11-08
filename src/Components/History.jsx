@@ -1,5 +1,6 @@
 import React from 'react'
-import "../Styles/PaymentHistory.css"
+// import "../Styles/PaymentHistory.css"
+import "../style.css"
 import rect from "../assets/afren-images2/Rectangle 34624273.png"
 
 export default function History() {

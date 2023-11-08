@@ -1,5 +1,6 @@
 import React from 'react'
-import "../Styles/client-profile-fv.css"
+// import "../Styles/client-profile-fv.css"
+import "../style.css"
 import greaterThan from "../assets/afren-images2/greater-than-symbol.png"
 import brianaSquare from "../assets/afren-images2/Briana_Square_Web.jpg.png"
 import location from "../assets/afren-images2/location.png"

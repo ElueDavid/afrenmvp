@@ -1,5 +1,6 @@
 import React from 'react'
-import "../Styles/sett-afr-pf.css"
+// import "../Styles/sett-afr-pf.css"
+import "../style.css"
 import ellipse from "../assets/afren-images2/Ellipse 31.png"
 import badge from "../assets/afren-images2/Badge.png"
 import rect from "../assets/afren-images2/Rectangle 34624338.png"

@@ -1,7 +1,8 @@
 import React from 'react'
 import Header from '../Components/Navbar'
 import Sidebar from '../Components/Sidebar'
-import "../Styles/helpDispute.css"
+// import "../Styles/helpDispute.css"
+import "../style.css"
 
 
 export default function HelpDispute() {

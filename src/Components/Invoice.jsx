@@ -1,5 +1,6 @@
 import React from 'react'
-import "../Styles/PaymentInvoice.css"
+// import "../Styles/PaymentInvoice.css"
+import "../style.css"
 import frame1 from "../assets/afren-images2/Frame 427319851.png"
 import frame2 from "../assets/afren-images2/Frame 427319855.png"
 import frame3 from "../assets/afren-images2/Frame 427319857.png"

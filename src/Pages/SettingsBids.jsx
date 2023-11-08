@@ -1,5 +1,6 @@
 import React from 'react'
-import "../Styles/sett-bids.css"
+// import "../Styles/sett-bids.css"
+import "../style.css"
 import rect from "../assets/afren-images2/Rectangle 34624273.png"
 
 

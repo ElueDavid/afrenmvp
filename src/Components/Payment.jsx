@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import "../Styles/Payment.css"
+// import "../Styles/Payment.css"
+import "../style.css"
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
 import { Data } from '../utils/Data';

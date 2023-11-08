@@ -2,7 +2,8 @@ import React from 'react'
 import rect2 from "../assets/afren-images3/Rectangle 34624273-2.png"
 import rect from "../assets/afren-images3/Rectangle 34624273.png"
 import rect1 from "../assets/afren-images3/Rectangle 34624273-1.png"
-import "../Styles/MyJobFreeOne.css"
+// import "../Styles/MyJobFreeOne.css"
+import "../style.css"
 
 
 export default function FreelancerJob() {

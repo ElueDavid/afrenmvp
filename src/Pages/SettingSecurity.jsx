@@ -1,5 +1,6 @@
 import React from 'react'
-import "../Styles/sett-security.css"
+// import "../Styles/sett-security.css"
+import "../style.css"
 
 
 export default function SettingSecurity() {

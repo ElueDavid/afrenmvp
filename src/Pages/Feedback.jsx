@@ -1,6 +1,6 @@
 import React from 'react'
-import "../Styles/SettFeedback.css"
-
+// import "../Styles/SettFeedback.css"
+import "../style.css"
 
 export default function Feedback() {
   return (

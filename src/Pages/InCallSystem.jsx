@@ -1,5 +1,6 @@
 import React from 'react'
-import "../Styles/incall-system.css"
+// import "../Styles/incall-system.css"
+import "../style.css"
 import blueArrowLeft from "../assets/afren-images2/blue-arrow-left.png"
 import afrenLogo from "../assets/afren-images2/afren-logo.png"
 import link from "../assets/afren-images3/link.png"

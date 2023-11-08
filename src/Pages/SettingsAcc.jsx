@@ -1,5 +1,6 @@
 import React from 'react'
-import "../Styles/sett-acc.css"
+// import "../Styles/sett-acc.css"
+import "../style.css"
 import ellipse31 from "../assets/afren-images2/Ellipse 31.png"
 
 
