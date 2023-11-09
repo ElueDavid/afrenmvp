@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+
+
 *{
     margin: 0;
     padding: 0;
@@ -921,6 +923,8 @@ a {
     outline: none;
     padding: 0 5px;
     height: 40px;
+    margin: 0;
+    border-radius: 0;
 }
 
 .password2 figure span {
@@ -1016,6 +1020,11 @@ display: none;
 input[type="checkbox"]{
     max-width: 16px;
     max-height: 16px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0px; 
+    outline: none;
 }
 
 button.submit[type="submit"]{
@@ -1306,6 +1315,12 @@ input:focus{
 .input-psw{
     width: 93%;
     border: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    border: none;
+    border-radius: 0;
+    outline: none;
 }
 .t-c{
     display: flex;
@@ -5176,7 +5191,6 @@ header.jobss img {
 
 /* leaderboard  */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 *{
     margin: 0;
     padding: 0;
@@ -6275,8 +6289,6 @@ header {
 
 /* Help Dispute */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -7158,8 +7170,7 @@ tbody tr:hover {
 
 /* Payment */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -8132,8 +8143,7 @@ tbody tr:hover {
 
 /* payment invoice */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -8828,8 +8838,6 @@ tbody tr:hover {
 
 /* Payment History */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -9637,8 +9645,6 @@ tbody tr:hover {
 
 /* Feedback*/
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -10390,8 +10396,6 @@ tbody tr:hover {
 
 /* setting Account */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -11324,8 +11328,7 @@ tbody tr:hover {
 
 /* setting bidding */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -12186,8 +12189,6 @@ thead th{
 
 /* settings Profile */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -13173,8 +13174,7 @@ th, td{
 
 /* setting security */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -13879,7 +13879,7 @@ form input{
 
 /* client Profile */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 *{
     margin: 0;
     padding: 0;
@@ -14356,8 +14356,6 @@ body,html{
 
 /* freelancer job */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -15150,7 +15148,7 @@ body,html{
 
 /* freelancer job */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 *{
     margin: 0;
     padding: 0;
@@ -15777,7 +15775,7 @@ body,html{
 
 /*Message */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 
 .nav {
     position: fixed;
@@ -17014,8 +17012,7 @@ body,html{
 
 /* client Dash*/
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -18167,7 +18164,7 @@ body,html{
 
 /*client my job*/
 
-@import url("https://fonts.myJobs-googleapis.myJobs-com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 *{
     margin: 0;
     padding: 0;
@@ -18973,7 +18970,6 @@ body,html{
 
 /* gigs */
 
-@import url("https://fonts.myJobs-googleapis.myJobs-com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 :root {
     --white-text-color: #ffff;

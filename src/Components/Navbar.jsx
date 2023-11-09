@@ -92,8 +92,18 @@ export default function Header() {
                 </li>
                 <li><NavLink to="/about">About</NavLink></li>
                 <div id="drp-nav-but1">
-                    <a href="" id="drp-strt-butt1" className="butt-in-nav1">Get Started</a>
-                    <a href="" id="drp-sign-butt1" className="butt-in-nav1">Sign in</a>
+                    <NavLink 
+                        to="/signup" 
+                        id="drp-strt-butt1" 
+                        className="butt-in-nav1"
+                    >Get Started
+                    </NavLink>
+                    <NavLink 
+                        to="/login" 
+                        id="drp-sign-butt1" 
+                        className="butt-in-nav1"
+                    >Sign in
+                    </NavLink>
                 </div>
                  {/* <li><a href="" className="butt-in-nav">Sign in</a></li>
                 <li><a href="" className="butt-in-nav">Get Started</a></li> */}
