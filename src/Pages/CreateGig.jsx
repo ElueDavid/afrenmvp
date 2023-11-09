@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "../Styles/Gigs.css"
+import "../style.css"
 import Gig1 from '../Components/Gig1'
 import Gig2 from '../Components/Gig2'
 import Gig3 from '../Components/Gig3'

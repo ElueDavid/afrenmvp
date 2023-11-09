@@ -1,5 +1,6 @@
 import React from 'react'
-import "../Styles/Message.css"
+// import "../Styles/Message.css"
+import "../style.css"
 import searchBlue from "../assets/afren-images2/search-blue.png"
 import dropdown from "../assets/afren-images2/dropdown-icon-black.png"
 import female1 from "../assets/afren-images2/female1.png"

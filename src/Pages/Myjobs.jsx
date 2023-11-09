@@ -1,5 +1,6 @@
 import React from 'react'
-import "../Styles/my-jobs.css";
+// import "../Styles/my-jobs.css";
+import "../style.css"
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';

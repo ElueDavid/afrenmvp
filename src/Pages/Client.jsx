@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import "../Styles/ClentDash.css"
+// import "../Styles/ClentDash.css"
+import "../style.css"
 import Chart from "chart.js/auto";
 import { CategoryScale } from 'chart.js';
 import { Data } from '../utils/Data';
