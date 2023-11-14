@@ -3,7 +3,8 @@ import Header from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
-import '../Styles/privacy.css'
+// import '../Styles/privacy.css'
+import "../style.css"
 
 export default function Privacy() {
   return (
