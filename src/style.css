@@ -20929,7 +20929,7 @@ input[type='file'] {
 }
 #top-whole{
     height: 400px;
-    /* background-image: url("../assets/afren-images2/Article\ Image-1.png"); */
+    background-image: url("src/assets/afren-images2/Article Image-1.png");
     position: relative;
     background-size: cover;
 }

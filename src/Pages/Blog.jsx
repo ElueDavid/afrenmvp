@@ -18,7 +18,7 @@ export default function Blog() {
     <>
       <Navbar />
       <div id="body-whole">
-        <div id="top-whole" style={{backgroundImage: 'url("src/assets/afren-images2/Article Image-1.png")'}}>
+        <div id="top-whole">
             <div id="top-article">
                 <p className="article-head">FEATURED ARTICLE</p>
                 <h2 className="article-topic">Success Stories from Our Community.</h2>
