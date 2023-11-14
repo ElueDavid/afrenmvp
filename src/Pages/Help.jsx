@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from '../Components/Navbar'
 import Sidebar from '../Components/Sidebar'
-import "../Styles/help.css"
-
+// import "../Styles/help.css"
+import "../style.css"
 
 export default function Help() {
   return (
