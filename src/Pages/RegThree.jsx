@@ -3,7 +3,7 @@ import Header from '../Components/Navbar'
 import plus from "../assets/afren-images/Plus.svg"
 import cross from "../assets/afren-images/Cross.svg"
 
-import '../Styles/regthree.css'
+// import '../Styles/regthree.css'
 export default function RegThree({func}) {
   const [inputEls, setInputEls] = useState([])
   const [popularSkill, setPopularSKill] = useState([

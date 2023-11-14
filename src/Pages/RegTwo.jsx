@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from '../Components/Navbar'
-import '../Styles/regTwo.css'
+// import '../Styles/regTwo.css'
 export default function RegTwo({func}) {
     const [inputEls,setInputEls] = useState([])
     const [formObj2, setFormObj2] = useState({

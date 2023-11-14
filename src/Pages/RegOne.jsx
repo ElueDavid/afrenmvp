@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import Navbar from '../Components/Navbar'
-import '../Styles/regOne.css'
+// import '../Styles/regOne.css'
+import "../style.css"
 import RegTwo from './RegTwo';
 import RegThree from './RegThree';
 export default function RegOne() {

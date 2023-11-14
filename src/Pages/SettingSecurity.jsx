@@ -26,6 +26,7 @@ export default function SettingSecurity() {
             return 
         }
         else{
+            console.log({email})
             try{
                 const response = await axios.post(ENDPOINT,{email})
                 setIsLoading(false)
@@ -36,7 +37,11 @@ export default function SettingSecurity() {
                 toast.error("An Error Occured")
                 setIsLoading(false)
             }
+            // finally{
+            //     localStorage.clear()
+            // }
         }
+
     }
     async function handleClick(e){
         e.preventDefault()
@@ -47,6 +52,7 @@ export default function SettingSecurity() {
             otp : otp,
             newPassword : newPassword
         }
+        console.log(PayLoad)
         try{
             const response = await axios.post(ENDPOINT2,PayLoad)
             console.log(response.response)
