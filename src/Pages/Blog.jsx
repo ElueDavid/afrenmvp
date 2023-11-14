@@ -2,7 +2,8 @@ import React from 'react'
 import Navbar from "../Components/Navbar"
 import JoinUs from '../Components/JoinUs'
 import Footer from '../Components/Footer'
-import "../Styles/Blog.css"
+// import "../Styles/Blog.css"
+import "../style.css"
 import rect from "../assets/afren-images2/Rectangle 2.png"
 import rect1 from "../assets/afren-images2/Rectangle 2-1.png"
 import rect2 from "../assets/afren-images2/Rectangle 2-2.png"
