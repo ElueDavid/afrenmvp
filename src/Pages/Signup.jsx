@@ -80,10 +80,6 @@ export default function Signup() {
           ).then(() => {
             window.location.href = "/"
           })
-          localStorage.clear()
-          localStorage.setItem('details1', email);
-          localStorage.setItem('details2', password);
-
           setFormObj({
             firstName: "",
             lastName: "",
@@ -175,7 +171,6 @@ export default function Signup() {
                     <button
                         type="submit"
                         id="crt-btn"
-                        disabled={!isFormActive}
                     >
                         { isLoading 
                         ? (

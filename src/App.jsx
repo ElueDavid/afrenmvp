@@ -25,6 +25,7 @@ import Blog from './Pages/Blog'
 import Client from './Pages/Client'
 import Myjobs from './Pages/Myjobs'
 import CreateGig from './Pages/CreateGig'
+import CompleteRegistration from './Pages/CompleteRegistration'
 
 function App() {
 
@@ -35,14 +36,14 @@ function App() {
       <Route path="/blog" element={<Blog />} />
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
-        <Route path="/freelancersignup" element={<FreelancerSignup />} />
-        <Route path='/clientsignup' element={<ClientSignup />} />
+        {/* <Route path="/freelancersignup" element={<FreelancerSignup />} /> */}
+        {/* <Route path='/clientsignup' element={<ClientSignup />} /> */}
         <Route path='/about' element={<About/>}/>
-        <Route path='/client-registration' element={<ClientReg/>}/>
+        <Route path='/clientreg' element={<ClientReg/>}/>
         <Route path='/news' element={<News/>}/>
         <Route path='/howitworks' element={<HowItWorks />} />
         <Route path='/privacy' element={<Privacy />} />
-        <Route path="/reg" element={<RegOne />} />
+        <Route path="/freelancerreg" element={<RegOne />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/buyerreg" element={<BuyerReg />} />
         <Route path="/contact" element={<ContactUs />} />
@@ -56,6 +57,7 @@ function App() {
         <Route path='/jobs' element={<Jobs />} />
         {/* <Route path='/myjobs' element={<Myjobs />} /> */}
         <Route path="/createGig" element={<CreateGig />} />
+        <Route path="/completeregistration" element={<CompleteRegistration />} />
       </Routes>
     </Router>
   )

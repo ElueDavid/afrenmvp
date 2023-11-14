@@ -43,7 +43,7 @@ export default function Login() {
   async function handleSubmit(e){
     e.preventDefault()
     setLoading(true)
-    console.log("clicked!!!")
+    localStorage.setItem("email",formObj.email)
     try{
       const response = await axios.post(endpoint,formObj)
       setLoading(false)

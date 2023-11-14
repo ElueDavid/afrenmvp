@@ -10,31 +10,24 @@ import toast, { Toaster } from 'react-hot-toast';
 
 export default function TypeOfUser({user, endpoint}) {
     const [isLoading,setIsLoading] = useState(false)
-    async function handleClick(){
-        setIsLoading(true)
-        const ENDPOINT = endpoint;
-        const email = localStorage.getItem('details1')
-        const password = localStorage.getItem('details2')
-        const payLoad  = {
-            email,
-            password
-        }
-        try{
-            const response = await axios.post(ENDPOINT,payLoad)
-            localStorage.clear()
-            console.log(response)
-            if(response.data.message !== "Client does not exist"){
-                toast.success("Account Successfully created!")
-            }
-            setIsLoading(false)
-        }catch(error){
-            setIsLoading(false)
-            toast.error("An Error Occurred!!")
-        }
-    }
+    // async function handleClick(){
+    //     setIsLoading(true)
+    //     const ENDPOINT = endpoint;
+    //     try{
+    //         const response = await axios.post(ENDPOINT,payLoad)
+    //         localStorage.clear()
+    //         console.log(response)
+    //         if(response.data.message !== "Client does not exist"){
+    //             toast.success("Account Successfully created!")
+    //         }
+    //         setIsLoading(false)
+    //     }catch(error){
+    //         setIsLoading(false)
+    //         toast.error("An Error Occurred!!")
+    //     }
+    // }
   return (
     <>
-        <Toaster />
         <header className={styles.signup}>
             <div className={styles.header_text}>
                 <h1>Sign up</h1>
