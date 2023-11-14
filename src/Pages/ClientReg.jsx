@@ -22,6 +22,7 @@ export default function ClientReg() {
     state : "",
     zipCode : "",
     country : "",
+    occupation : "",
     phoneNumber : "",
     educationLevel : "",
     maritalStatus : "",
@@ -39,6 +40,7 @@ export default function ClientReg() {
     state,
     zipCode,
     country,
+    occupation,
     phoneNumber,
     educationLevel,
     maritalStatus,
@@ -87,7 +89,20 @@ export default function ClientReg() {
   function handleSubmit(e){
     e.preventDefault()
     setIsLoading(true)
-    axios.post(endpoint, formObj)
+
+    const socialInputLinks = document.querySelectorAll(".links-input") 
+    let linksArray = [];
+    console.log(socialInputLinks)
+    socialInputLinks.forEach((link,index)=>{
+      linksArray.push(link.value)
+    });
+
+  const payLoad = {
+      ...formObj,
+      socialMediaLinks : `${linksArray}`
+    }
+    console.log(payLoad)
+    axios.post(endpoint, payLoad)
     .then((response)=>{
       setIsLoading(false)
       Swal.fire({
@@ -96,7 +111,28 @@ export default function ClientReg() {
         text: 'Welcome to Afren!!'
         // footer: '<a href="">Why do I have this issue?</a>'
       })
-      console.log(response)
+      // console.log(response)
+      setFormObj({
+          companyName : "",
+          companyEmail : "",
+          companyAddress : "",
+          residentialAddress : "",
+          city : "",
+          state : "",
+          zipCode : "",
+          country : "",
+          occupation : "",
+          phoneNumber : "",
+          educationLevel : "",
+          maritalStatus : "",
+          monthlyIncome : "",
+          socialMediaLinks: "",
+          profileImage : ""
+      })
+      socialInputLinks.forEach((link,index)=>{
+        link.value = ""
+      });
+        
     }).catch((error)=>{
       setIsLoading(false)
       Swal.fire({
@@ -409,7 +445,12 @@ export default function ClientReg() {
                     <option value="Master's degree">Master's degree</option>
                     <option value="Doctorate or higher">Doctorate or higher</option>
                 </select>
-                <select class="select-opti" id="occupation" name="occupation">
+                <select class="select-opti" 
+                  value={occupation} 
+                  id="occupation" 
+                  name="occupation"
+                  onChange={handleChange}
+                  >
                     <option value="" selected="selected" disabled="disabled">occupation</option>
                     <optgroup label="Healthcare Practitioners and Technical Occupations:">
                       <option value="1">-  Chiropractor</option>
@@ -520,14 +561,19 @@ export default function ClientReg() {
                   {
                     socials.map((social,index)=>{
                       return (
-                        <input id={social} key={index} class="form-text" placeholder="Enter full URL"></input>
+                        <input 
+                          id={social} 
+                          key={index} 
+                          class="form-text links-input" 
+                          placeholder="Enter full URL"
+                          
+                          ></input>
                       )
                     })
                   }
                 </div>
                 <div class="form-innerdiv">
-                    <input type="url" name="socialMediaLinks" value={socialMediaLinks} 
-                    onChange={handleChange}  id="last-url" class="form-text" placeholder="Enter full URL" required/>
+                    <input type="url" id="last-url" class="form-text links-input" placeholder="Enter full URL" required/>
                     { socials.length === 2 || maxSocialLinks
                       ? <div id="add-url" onClick={handleClick2}>-</div> 
                      : <div id="add-url" onClick={handleClick}>+</div>

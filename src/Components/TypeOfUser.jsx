@@ -1,13 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import signup_header from "../assets/afren-images/signup-header-img.png"
 import freelancer_pc from "../assets/afren-images/freelancer-pc.png"
 import freelancer_client from "../assets/afren-images/freelancer&client.png"
 import  styles from "../Styles/TypeOfUser.module.css"
+import axios from "axios"
+import { Oval } from  'react-loader-spinner'
+import toast, { Toaster } from 'react-hot-toast';
 
 
-export default function TypeOfUser({user}) {
+export default function TypeOfUser({user, endpoint}) {
+    const [isLoading,setIsLoading] = useState(false)
+    async function handleClick(){
+        setIsLoading(true)
+        const ENDPOINT = endpoint;
+        const email = localStorage.getItem('details1')
+        const password = localStorage.getItem('details2')
+        const payLoad  = {
+            email,
+            password
+        }
+        try{
+            const response = await axios.post(ENDPOINT,payLoad)
+            localStorage.clear()
+            console.log(response)
+            if(response.data.message !== "Client does not exist"){
+                toast.success("Account Successfully created!")
+            }
+            setIsLoading(false)
+        }catch(error){
+            setIsLoading(false)
+            toast.error("An Error Occurred!!")
+        }
+    }
   return (
     <>
+        <Toaster />
         <header className={styles.signup}>
             <div className={styles.header_text}>
                 <h1>Sign up</h1>
@@ -35,8 +62,24 @@ export default function TypeOfUser({user}) {
             </div>
         </main>
 
-        <a href="#" className={styles.create_account_2}>
-            {user}
+        <a  href="javascript:void(0)"
+            onClick={handleClick} 
+            className={styles.create_account_2}>
+            { !isLoading
+            ? user
+            :  <Oval
+                height={30}
+                width={30}
+                color="#fff"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+                ariaLabel='oval-loading'
+                secondaryColor="#015B7E"
+                strokeWidth={2}
+                strokeWidthSecondary={2}
+        />
+            }
         </a>
     </>
   )

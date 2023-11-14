@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../Components/Navbar'
 import '../Styles/News.css'
 import Rect1 from '../assets/afren-images/Rectangle 34624264.png'
@@ -9,10 +9,27 @@ import Rect5 from  '../assets/afren-images/Rectangle 519.png'
 import Rect6 from '../assets/afren-images/Rectangle 520.png'
 import JoinUs from '../Components/JoinUs'
 import Footer from '../Components/Footer'
+import axios from "axios"
 
+
+const getNewsEndpoint = "https://afren-main-server.onrender.com//api/getNews"
+const postNewsEndpoint = "https://afren-waitlist.onrender.com/api/news"
 
 
 export default function News() {
+
+    async function getNews(){
+        try{
+            const response = await axios.get(getNewsEndpoint)
+            console.log(response)
+        }catch(error){
+            console.log(error)
+        }
+    }
+
+    useEffect(()=>{
+        getNews()
+    },[])
   return (
     <>
         <Navbar />

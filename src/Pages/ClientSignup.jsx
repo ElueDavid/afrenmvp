@@ -7,7 +7,10 @@ export default function ClientSignup() {
   return (
     <>
         <Header />
-        <TypeOfUser user={"Signup as a client"} />
+        <TypeOfUser 
+          user={"Signup as a client"} 
+          endpoint={"https://afren-main-server.onrender.com/api/auth/client"}
+          />
         <Footer /> 
     </>
   )
