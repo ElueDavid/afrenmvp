@@ -1,7 +1,8 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
-import '../Styles/terms.css'
+// import '../Styles/terms.css'
+import "../style.css"
 
 export default function Terms() {
   return (
