@@ -3,7 +3,8 @@ import JoinUs from '../Components/JoinUs'
 import Footer from '../Components/Footer'
 import Navbar from "../Components/Navbar"
 // import "../Styles/testimonials.css"
-import '../Styles/About.css'
+// import '../Styles/About.css'
+import "../style.css"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/css';
