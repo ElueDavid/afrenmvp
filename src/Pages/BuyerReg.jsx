@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from "../Components/Navbar"
-import "../Styles/buyerReg.css"
+// import "../Styles/buyerReg.css"
+import "../style.css"
 
 export default function BuyerReg() {
   return (
