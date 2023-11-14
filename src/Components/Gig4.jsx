@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Gig4({setCount,count}) {
-
+    const [hour,setHour] = useState("")
+    const [hour1,setHour1] = useState("")
+    
     function handleSubmit(e){
         e.preventDefault();
         window.scroll({
@@ -39,7 +41,12 @@ export default function Gig4({setCount,count}) {
                     <div className="step-rate">
                         <div>
                             <p>NGN</p>
-                            <input type="tel" value={10} />
+                            <input 
+                                type="tel" 
+                                name='hour'
+                                value={hour}
+                                onChange={(e)=>{setHour(e.target.value)}}
+                                />
                         </div>
                         <p className="step-hour">/ hour</p>
                     </div>
@@ -49,7 +56,12 @@ export default function Gig4({setCount,count}) {
                     <div className="step-rate">
                         <div>
                             <p>NGN</p>
-                            <input type="tel" value={10}/>
+                            <input 
+                                type="tel" 
+                                name='hour1'
+                                value={hour1}
+                                onChange={(e)=>{setHour1(e.target.value)}}
+                                />
                         </div>
                         <p className="step-hour">/ hour</p>
                     </div>
