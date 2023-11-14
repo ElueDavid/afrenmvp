@@ -17,7 +17,8 @@ import plant_2 from "../assets/afren-images/plant-2.png"
 import graphics from "../assets/afren-images/Graphics.png"
 import Briefcases from "../assets/afren-images/Briefcases.png"
 import background_complete from '../assets/afren-images/background-complete.png'
-import '../Styles/howItWorks.css'
+// import '../Styles/howItWorks.css'
+import "../style.css"
 
 
 export default function HowItWorks() {
