@@ -1,4 +1,4 @@
-import React,{useEffect,useRef} from 'react'
+import React,{useEffect,useRef, useState} from 'react'
 import Navbar from '../Components/Navbar'
 // import '../Styles/About.css'
 import "../style.css"
@@ -12,10 +12,35 @@ import wael from '../assets/afren-images/Wael_Square_Web.jpg.png'
 import Testimonials from '../Components/Testimonials'
 import JoinUs from '../Components/JoinUs'
 import Footer from '../Components/Footer'
+import axios from "axios"
+import { Oval } from  'react-loader-spinner'
+import Avenger from "../Components/Avenger"
 
+
+const ENDPOINT = "https://afren-main-server.onrender.com/api/getAvengers"
 
 export default function About() {
+    const [team,setTeam] = useState([])
+    const [isLoading,setIsLoading] = useState(true)
     const divRef = useRef(null)
+
+    async function getAvengers(){
+        setIsLoading(true)
+        try{
+            const response = await axios.get(ENDPOINT)
+            setIsLoading(false)
+            if(response.status === 200){
+                setTeam(response.data)
+            }
+        }catch(error){
+            setIsLoading(false)
+            console.log(error)
+        }
+    }
+    useEffect(()=>{
+        getAvengers()
+    },[])
+
     useEffect(()=>{
         const observer = new IntersectionObserver(
             ([entry])=>{
@@ -51,7 +76,14 @@ export default function About() {
             <div id="lead-teaminner">
                 <h1>Meet the Leadership Team</h1>
                 <div id="team-leads">
-                    <div className="indi-team">
+                    {
+                        team.map((member)=>{
+                            return (
+                                <Avenger {...member}  key={member.id}/>
+                            )
+                        })
+                    }
+                    {/* <div className="indi-team">
                         <div className="member-pic"><img src={mynul} alt=""/></div>
                         <p><b>Mynul Khan</b></p>
                         <small>Founder & CEO</small>
@@ -80,7 +112,7 @@ export default function About() {
                         <div className="member-pic"><img src={wael} alt=""/></div>
                         <p><b>Wael Mohammed</b></p>
                         <small>EVP of Strategy</small>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

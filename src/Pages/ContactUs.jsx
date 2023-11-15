@@ -57,6 +57,13 @@ export default function ContactUs() {
                     icon: 'success',
                     title: 'Thank you for reaching out to us',
                     text: 'we will get in touch soon'
+                  }).then(()=>{
+                    setFormObj({
+                        fullName: "",
+                        email: "",
+                        phoneNumber: "",
+                        inquiry: ""
+                    })
                   })
             }
             else{
